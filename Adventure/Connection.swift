@@ -9,6 +9,7 @@
 import Foundation
 
 class Connection {
+    
     var prompt: String!
     var connectedToNode: String!
     
