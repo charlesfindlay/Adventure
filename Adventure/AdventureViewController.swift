@@ -18,6 +18,10 @@ class AdventureViewController : UIViewController, UITableViewDelegate, UITableVi
     var currentAdventure: Adventure!
     var currentStoryNode: StoryNode!
     
+    override func viewWillAppear(animated: Bool) {
+        storyDisplayArea.text = currentStoryNode.storyText
+    }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentStoryNode.connections!.count

@@ -41,7 +41,7 @@ class Adventure {
         
         
         
-        newAdventure.start = newAdventure.storyNodes["node1"]
+        newAdventure.start = node1
         return newAdventure
     }
     
