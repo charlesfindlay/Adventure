@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var adventures: [Adventure] = []
+    var selectedAdventure = Adventure()
     
     
     @IBOutlet weak var adventureListTable: UITableView!
@@ -38,6 +39,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell?.textLabel?.text = adventures[indexPath.row].title
         
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedAdventure = adventures[indexPath.row]
+        self.performSegueWithIdentifier("myAdventure", sender: indexPath.row)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "myAdventure" {
+            let vc = segue.destinationViewController as! AdventureViewController
+            vc.currentAdventure = selectedAdventure
+            vc.currentStoryNode = selectedAdventure.start
+        }
     }
 
 }

@@ -11,5 +11,13 @@ import Foundation
 class StoryNode {
     var storyText: String!
     var connections: [Connection]!
+    var result: String?
+    
+    init () {
+        
+        self.storyText = ""
+        self.connections = []
+        self.result = ""
+    }
     
 }

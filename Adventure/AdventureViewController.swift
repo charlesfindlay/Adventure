@@ -8,10 +8,26 @@
 
 import UIKit
 
-class AdventureViewController : UITableViewController {
+class AdventureViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    override func viewDidLoad() {
-        
+    @IBOutlet weak var imageOutlet: UIImageView!
+    @IBOutlet weak var storyDisplayArea: UILabel!
+    @IBOutlet weak var promptTable: UITableView!
+    
+    var currentAdventure: Adventure!
+    var currentStoryNode: StoryNode!
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return currentStoryNode.connections!.count
     }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("promptCell")
+        cell?.textLabel?.text = currentStoryNode.connections![indexPath.row].prompt
+        
+        return cell!
+    }
+    
 }

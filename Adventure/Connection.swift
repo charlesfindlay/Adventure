@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Connection {
+struct Connection {
     
     var prompt: String!
     var connectedToNode: String!
