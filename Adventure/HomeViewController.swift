@@ -18,9 +18,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let kraken = Adventure().createKrakenAdventure()
-        adventures.append(kraken)
-        
+        let story1 = Adventure().createFirstAdventure()
+        let story2 = Adventure().createSecondAdventure()
+        adventures.append(story1)
+        adventures.append(story2)
     }
 
     override func didReceiveMemoryWarning() {
