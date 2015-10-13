@@ -24,6 +24,22 @@
                                     <constraint firstAttribute="width" constant="280" id="7Cs-vk-zCQ"/>
                                     <constraint firstAttribute="height" constant="476" id="9oM-1z-ZO7"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="adventureListCell" id="peL-bH-sXL">
+                                        <rect key="frame" x="0.0" y="92" width="280" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="peL-bH-sXL" id="sx8-Ou-B0e">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6oc-sm-iAp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Br0-al-Dkw"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -34,6 +50,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YVd-c0-c0B"/>
+                    <connections>
+                        <outlet property="adventureListTable" destination="VDn-Ne-Q2e" id="ido-zP-4NF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

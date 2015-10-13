@@ -10,6 +10,6 @@ import Foundation
 
 class StoryNode {
     var storyText: String!
-    var connections: [Connection]
+    var connections: [Connection]!
     
 }
