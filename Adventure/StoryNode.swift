@@ -20,4 +20,8 @@ class StoryNode {
         self.result = ""
     }
     
+    func promptCount() -> Int {
+        return connections.count
+    }
+    
 }

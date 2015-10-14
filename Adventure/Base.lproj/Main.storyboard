@@ -84,9 +84,10 @@
                                     <outlet property="delegate" destination="Jfq-nI-BoH" id="XI7-zk-YJd"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="voW-LR-ydV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="voW-LR-ydV">
                                 <rect key="frame" x="40" y="72" width="240" height="138"/>
                                 <animations/>
+                                <color key="backgroundColor" red="1" green="0.79992021000000002" blue="0.50203279710000004" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdh-MW-8ue">
                                 <rect key="frame" x="20" y="241" width="280" height="85"/>
@@ -99,11 +100,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikx-MQ-w4m">
+                                <rect key="frame" x="135" y="211" width="50" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartStory:" destination="Jfq-nI-BoH" eventType="touchUpInside" id="ehj-T7-8ax"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ikx-MQ-w4m" firstAttribute="centerX" secondItem="gA9-kv-Xti" secondAttribute="centerX" id="9rT-ZP-VYp"/>
                             <constraint firstItem="tdh-MW-8ue" firstAttribute="centerY" secondItem="gA9-kv-Xti" secondAttribute="centerY" id="AWD-cJ-sgG"/>
+                            <constraint firstItem="voW-LR-ydV" firstAttribute="centerX" secondItem="gA9-kv-Xti" secondAttribute="centerX" id="G4m-sY-uwg"/>
+                            <constraint firstItem="tdh-MW-8ue" firstAttribute="top" secondItem="ikx-MQ-w4m" secondAttribute="bottom" id="hbc-VH-BlZ"/>
                             <constraint firstItem="tdh-MW-8ue" firstAttribute="centerX" secondItem="gA9-kv-Xti" secondAttribute="centerX" id="q32-Xv-nxc"/>
                         </constraints>
                     </view>
@@ -111,6 +123,7 @@
                     <connections>
                         <outlet property="imageOutlet" destination="voW-LR-ydV" id="3eA-yR-9Fo"/>
                         <outlet property="promptTable" destination="qc1-rh-cra" id="weh-zZ-sHD"/>
+                        <outlet property="restartButtonOutlet" destination="ikx-MQ-w4m" id="7ts-y0-Xyc"/>
                         <outlet property="storyDisplayArea" destination="tdh-MW-8ue" id="ANF-4e-i7X"/>
                     </connections>
                 </viewController>

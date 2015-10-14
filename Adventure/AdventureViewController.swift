@@ -14,6 +14,7 @@ class AdventureViewController : UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var imageOutlet: UIImageView!
     @IBOutlet weak var storyDisplayArea: UILabel!
     @IBOutlet weak var promptTable: UITableView!
+    @IBOutlet weak var restartButtonOutlet: UIButton!
     
     var currentAdventure: Adventure!
     var currentStoryNode: StoryNode!
@@ -21,8 +22,12 @@ class AdventureViewController : UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         storyDisplayArea.text = currentStoryNode.storyText
+        restartButtonOutlet.hidden = currentStoryNode.promptCount() > 0
+        
     }
     
+    @IBAction func restartStory(sender: AnyObject) {
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentStoryNode.connections!.count
