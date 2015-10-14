@@ -27,6 +27,8 @@ class AdventureViewController : UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func restartStory(sender: AnyObject) {
+        let controller = self.navigationController!.viewControllers[1]
+        self.navigationController?.popToViewController(controller, animated: true)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +43,16 @@ class AdventureViewController : UIViewController, UITableViewDelegate, UITableVi
         cell.textLabel!.numberOfLines = 0
         
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        //Push the next story node.
+        let nextStoryNode = currentStoryNode.connections[indexPath.row].connectedToNode
+        let controller = self.storyboard!.instantiateViewControllerWithIdentifier("AdventureViewController") as! AdventureViewController
+        controller.currentStoryNode = currentAdventure.storyNodes[nextStoryNode]
+        controller.currentAdventure = self.currentAdventure
+        self.navigationController!.pushViewController(controller, animated: true)
     }
     
 }

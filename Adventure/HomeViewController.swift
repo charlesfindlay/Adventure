@@ -37,6 +37,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("adventureListCell")
         cell?.textLabel?.text = adventures[indexPath.row].title
+        cell?.detailTextLabel?.text = adventures[indexPath.row].author
         
         return cell!
     }
