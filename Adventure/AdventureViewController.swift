@@ -18,7 +18,8 @@ class AdventureViewController : UIViewController, UITableViewDelegate, UITableVi
     var currentAdventure: Adventure!
     var currentStoryNode: StoryNode!
     
-    override func viewWillAppear(animated: Bool) {
+    
+    override func viewDidLoad() {
         storyDisplayArea.text = currentStoryNode.storyText
     }
     

@@ -45,7 +45,7 @@ class Adventure {
         
         //Create Node 2
         let node2 = StoryNode()
-        node1.storyText = "The Kraken returns to the ocean satisified with its snack. Poor Amelia. She'll be remembered in song and ballad."
+        node2.storyText = "The Kraken returns to the ocean satisified with its snack. Poor Amelia. She'll be remembered in song and ballad."
         //Create node result
         node2.result = "You Lose!"
         //Add node to adventure
@@ -54,7 +54,7 @@ class Adventure {
         
         //Create Node 3
         let node3 = StoryNode()
-        node1.storyText = "Ameila scrambles up a hill where she meets two great warriors of legend and their followers: Achilles and She-Ra. Who does she ask to be her champion?"
+        node3.storyText = "Ameila scrambles up a hill where she meets two great warriors of legend and their followers: Achilles and She-Ra. Who does she ask to be her champion?"
         //Create node connections
         var connection31 = Connection()
         connection31.prompt = "She-Ra: Princess of Power and ???"
@@ -63,8 +63,8 @@ class Adventure {
         connection32.prompt = "Achilles and his Myrmydons"
         connection32.connectedToNode = "node5"
         //Add connections to node
-        node1.connections?.insert(connection31, atIndex: 0)
-        node1.connections?.insert(connection32, atIndex: 1)
+        node3.connections?.insert(connection31, atIndex: 0)
+        node3.connections?.insert(connection32, atIndex: 1)
         //Add node to adventure
         myNodes["node3"] = node3
         
