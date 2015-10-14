@@ -23,8 +23,10 @@ class AdventureViewController : UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         storyDisplayArea.text = currentStoryNode.storyText
         restartButtonOutlet.hidden = currentStoryNode.promptCount() > 0
+        //imageOutlet.image = UIImage(named: currentAdventure.picture)
         
     }
+    
     
     @IBAction func restartStory(sender: AnyObject) {
         let controller = self.navigationController!.viewControllers[1]

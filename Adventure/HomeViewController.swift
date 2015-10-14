@@ -38,6 +38,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCellWithIdentifier("adventureListCell")
         cell?.textLabel?.text = adventures[indexPath.row].title
         cell?.detailTextLabel?.text = adventures[indexPath.row].author
+        let imageName = adventures[indexPath.row].picture
+        cell!.imageView!.image = UIImage(named: imageName)
         
         return cell!
     }

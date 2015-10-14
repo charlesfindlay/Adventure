@@ -14,12 +14,13 @@ class Adventure {
     var start: StoryNode!
     var storyNodes: [String: StoryNode]!
     var author: String
-    var picture: UIImage!
+    var picture: String
     
     init() {
         self.title = ""
         self.storyNodes = [:]
         self.author = "by Charles Findlay"
+        self.picture = ""
     }
     
     
@@ -27,6 +28,7 @@ class Adventure {
     func createFirstAdventure() -> Adventure {
         let newAdventure = Adventure()
         newAdventure.title = "Amelia's Adventure"
+        newAdventure.picture = "Kraken.jpg"
         
         //Create Node 1
         let node1 = StoryNode()
@@ -59,7 +61,7 @@ class Adventure {
         node3.storyText = "Ameila scrambles up a hill where she meets two great warriors of legend: Achilles and She-Ra. Who becomes her champion?"
         //Create node connections
         var connection31 = Connection()
-        connection31.prompt = "She-Ra: Princess of Power and ???"
+        connection31.prompt = "She-Ra: Princess of Power and Kowl"
         connection31.connectedToNode = "node4"
         var connection32 = Connection()
         connection32.prompt = "Achilles and his Myrmidons"
@@ -99,11 +101,11 @@ class Adventure {
     func createSecondAdventure() -> Adventure {
         let newAdventure = Adventure()
         newAdventure.title = "Joel's Haunting"
-        
+        newAdventure.picture = "HauntedHouse.png"
         
         //Create Node 1
         let node1 = StoryNode()
-        node1.storyText = "Joel walks in the Lotus Casino and sees Lionel Ritchie. What does he do?"
+        node1.storyText = "Joel walks into the Lotus Casino and sees Lionel Ritchie. What does he do?"
         //Create node connections
         var connection11 = Connection()
         connection11.prompt = "He turns to leave"
@@ -132,7 +134,7 @@ class Adventure {
         node3.storyText = "Lionel holds out his cell phone. Hey, take a look at these Justin Bieber photos on my phone. He's amazing"
         //Create node connections
         var connection31 = Connection()
-        connection31.prompt = "You're a Belieber, stay and look at the photos"
+        connection31.prompt = "You're a Belieber. Stay and look at the photos"
         connection31.connectedToNode = "node4"
         var connection32 = Connection()
         connection32.prompt = "Turn and walk away"
