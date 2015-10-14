@@ -16,20 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VDn-Ne-Q2e">
-                                <rect key="frame" x="20" y="72" width="280" height="476"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VDn-Ne-Q2e">
+                                <rect key="frame" x="0.0" y="64" width="320" height="484"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="7Cs-vk-zCQ"/>
-                                    <constraint firstAttribute="height" constant="476" id="9oM-1z-ZO7"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="adventureListCell" id="peL-bH-sXL">
-                                        <rect key="frame" x="0.0" y="92" width="280" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="peL-bH-sXL" id="sx8-Ou-B0e">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -44,10 +40,6 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="VDn-Ne-Q2e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HOg-yG-7aI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VDn-Ne-Q2e" secondAttribute="bottom" constant="20" id="kN8-sV-uZU"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YVd-c0-c0B"/>
                     <connections>

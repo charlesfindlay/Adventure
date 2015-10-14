@@ -28,8 +28,11 @@ class AdventureViewController : UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("promptCell")
-        cell?.textLabel?.text = currentStoryNode.connections![indexPath.row].prompt
+        let cell = tableView.dequeueReusableCellWithIdentifier("promptCell") as UITableViewCell!
+        
+        
+        cell.textLabel!.text = currentStoryNode.connections![indexPath.row].prompt
+        cell.textLabel!.numberOfLines = 0
         
         return cell!
     }
