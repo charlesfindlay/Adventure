@@ -25,6 +25,37 @@ class Adventure {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /////////////////////////////////////// Create Story Functions/////////////////////////////
+    
     func createFirstAdventure() -> Adventure {
         let newAdventure = Adventure()
         newAdventure.title = "Amelia's Adventure"

@@ -23,10 +23,13 @@ class AdventureViewController : UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         storyDisplayArea.text = currentStoryNode.storyText
         restartButtonOutlet.hidden = currentStoryNode.promptCount() > 0
-        //imageOutlet.image = UIImage(named: currentAdventure.picture)
+        imageOutlet.image = UIImage(named: currentAdventure.picture)
         
     }
     
+    deinit {
+        print("The view is dying")
+    }
     
     @IBAction func restartStory(sender: AnyObject) {
         let controller = self.navigationController!.viewControllers[1]
